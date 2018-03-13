@@ -1,0 +1,52 @@
+{
+  "programVersion": "1.0.0",
+  "programLanguage": "JAVA",
+  "displayName": "Get Hashes",
+  "note": "This app generates hashes.",
+  "programMain": "com.threatconnect.app.hash.GetHashesAppMain",
+  "languageVersion": "8",
+  "listDelimiter": "|",
+  "runtimeLevel": "Playbook",
+  "allowRunAsUser" : true,
+  "minServerVersion"  : "5.1.0",
+  "playbook": {
+    "type": "Utility",
+    "outputVariables": [
+      {
+        "name": "md5",
+        "type": "String"
+      },
+      {
+        "name": "md5",
+        "type": "StringArray"
+      },
+      {
+        "name": "sha1",
+        "type": "String"
+      },
+      {
+        "name": "sha1",
+        "type": "StringArray"
+      },
+      {
+        "name": "sha256",
+        "type": "String"
+      },
+      {
+        "name": "sha256",
+        "type": "StringArray"
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "content",
+      "label": "Contents to hash.",
+      "required": false,
+      "validValues": ["${TEXT}"],
+      "playbookDataType": [
+        "String", "StringArray", "Binary", "BinaryArray"
+      ]
+    }
+  ]
+}

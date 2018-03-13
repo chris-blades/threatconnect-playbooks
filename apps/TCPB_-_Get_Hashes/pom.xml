@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.threatconnect.apps.playbooks</groupId>
-    <artifactId>TCPB_-_Generate_UUID</artifactId>
+    <artifactId>TCPB_-_Get_Hashes</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -23,9 +23,9 @@
             <version>${threatconnect-sdk.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.fasterxml.uuid</groupId>
-            <artifactId>java-uuid-generator</artifactId>
-            <version>3.1.5</version>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.9</version>
         </dependency>
         <!-- Test -->
         <dependency>
@@ -39,6 +39,11 @@
             <artifactId>playbooks-test</artifactId>
             <version>${threatconnect-sdk.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.threatconnect.app</groupId>
+            <artifactId>playbooks-core</artifactId>
+            <version>2.9.2-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
